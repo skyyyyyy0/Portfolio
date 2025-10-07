@@ -9,7 +9,6 @@ This portfolio serves as a comprehensive showcase of my journey as a data scient
 - **Projects**: Real-world data science projects with detailed case studies
 - **Skills**: Technical proficiencies in machine learning, statistical analysis, and data visualization
 - **Education**: Academic background and continuous learning journey
-- **Experience**: Professional experience and achievements in the field
 - **Contact**: Easy ways to connect and collaborate
 
 ## 🚀 Tech Stack
@@ -65,4 +64,4 @@ Feel free to explore my portfolio and reach out for opportunities, collaboration
 
 ---
 
-**Built with ❤️ using React + TypeScript + Vite**
+**Built using React + TypeScript + Vite**
