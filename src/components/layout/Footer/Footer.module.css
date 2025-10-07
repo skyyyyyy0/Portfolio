@@ -1,0 +1,207 @@
+/* Footer Base */
+.footer {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem 0 2rem;
+    margin-top: 4rem;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 70%;
+    transition: all 0.3s ease;
+  }
+  
+  /* Main Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Section */
+  .section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Brand Title */
+  .brandTitle {
+    color: #667eea;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  /* Brand Description */
+  .brandDescription {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Social Links Container */
+  .socialLinks {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  /* Social Link */
+  .socialLink {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .socialLink:hover {
+    background: #667eea;
+    transform: translateY(-3px);
+  }
+  
+  /* Section Title */
+  .sectionTitle {
+    color: #3b82f6;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  /* Contact Title Variant */
+  .contactTitle {
+    color: #ec4899;
+  }
+  
+  /* Link List */
+  .linkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .linkItem {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Link */
+  .link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 0.25rem 0;
+  }
+  
+  .link:hover {
+    color: #667eea;
+  }
+  
+  /* Contact Info */
+  .contactInfo {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .contactItem {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Bottom Section */
+  .bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  /* Copyright */
+  .copyright {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  /* Tagline */
+  .tagline {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+  }
+  
+  .heart {
+    color: #ec4899;
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive - Tablet and below */
+  @media (max-width: 768px) {
+    .container {
+      width: 100%;
+      padding: 0 1rem;
+    }
+    
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .bottom {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+  /* Responsive - Small Mobile */
+  @media (max-width: 480px) {
+    .footer {
+      padding: 2rem 0 1.5rem;
+    }
+    
+    .brandTitle {
+      font-size: 1.3rem;
+    }
+    
+    .sectionTitle {
+      font-size: 1.1rem;
+    }
+    
+    .socialLinks {
+      justify-content: center;
+    }
+  }
+  
+  /* Accessibility - Focus Styles */
+  .link:focus,
+  .socialLink:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+  
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    .socialLink,
+    .link {
+      transition: none;
+    }
+    
+    .socialLink:hover {
+      transform: none;
+    }
+  }

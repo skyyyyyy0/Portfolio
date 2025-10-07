@@ -1,0 +1,399 @@
+/* Project Card Hover Borders with Glow Effects */
+.project-card[data-gradient*="667eea"]:hover,
+.project-card[data-gradient*="667eea"].project-card-hovered {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(#000, #000) padding-box,
+              linear-gradient(135deg, #667eea 0%, #764ba2 100%) border-box;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
+              0 0 20px rgba(102, 126, 234, 0.4),
+              0 0 40px rgba(118, 75, 162, 0.2);
+  animation: project-glow-1 2s ease-in-out infinite alternate;
+  border-radius: 24px;
+}
+
+.project-card[data-gradient*="FF6B6B"]:hover,
+.project-card[data-gradient*="FF6B6B"].project-card-hovered {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(#000, #000) padding-box,
+              linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%) border-box;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
+              0 0 20px rgba(255, 107, 107, 0.4),
+              0 0 40px rgba(255, 142, 83, 0.2);
+  animation: project-glow-2 2s ease-in-out infinite alternate;
+  border-radius: 24px;
+}
+
+.project-card[data-gradient*="4ECDC4"]:hover,
+.project-card[data-gradient*="4ECDC4"].project-card-hovered {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(#000, #000) padding-box,
+              linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%) border-box;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
+              0 0 20px rgba(78, 205, 196, 0.4),
+              0 0 40px rgba(68, 160, 141, 0.2);
+  animation: project-glow-3 2s ease-in-out infinite alternate;
+  border-radius: 24px;
+}
+
+.project-card[data-gradient*="FA709A"]:hover,
+.project-card[data-gradient*="FA709A"].project-card-hovered {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(#000, #000) padding-box,
+              linear-gradient(135deg, #FA709A 0%, #FEE140 100%) border-box;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
+              0 0 20px rgba(250, 112, 154, 0.4),
+              0 0 40px rgba(254, 225, 64, 0.2);
+  animation: project-glow-4 2s ease-in-out infinite alternate;
+  border-radius: 24px;
+}
+
+/* Glow Animations */
+@keyframes project-glow-1 {
+  0% {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
+                0 0 15px rgba(102, 126, 234, 0.3),
+                0 0 30px rgba(118, 75, 162, 0.15);
+  }
+  100% {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
+                0 0 25px rgba(102, 126, 234, 0.5),
+                0 0 50px rgba(118, 75, 162, 0.25);
+  }
+}
+
+@keyframes project-glow-2 {
+  0% {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
+                0 0 15px rgba(255, 107, 107, 0.3),
+                0 0 30px rgba(255, 142, 83, 0.15);
+  }
+  100% {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
+                0 0 25px rgba(255, 107, 107, 0.5),
+                0 0 50px rgba(255, 142, 83, 0.25);
+  }
+}
+
+@keyframes project-glow-3 {
+  0% {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
+                0 0 15px rgba(78, 205, 196, 0.3),
+                0 0 30px rgba(68, 160, 141, 0.15);
+  }
+  100% {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
+                0 0 25px rgba(78, 205, 196, 0.5),
+                0 0 50px rgba(68, 160, 141, 0.25);
+  }
+}
+
+@keyframes project-glow-4 {
+  0% {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
+                0 0 15px rgba(250, 112, 154, 0.3),
+                0 0 30px rgba(254, 225, 64, 0.15);
+  }
+  100% {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
+                0 0 25px rgba(250, 112, 154, 0.5),
+                0 0 50px rgba(254, 225, 64, 0.25);
+  }
+}
+
+/* Project Specific CSS Variables */
+.project-1 {
+  --accent-color: #667eea;
+  --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.project-2 {
+  --accent-color: #FF6B6B;
+  --gradient: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+}
+
+.project-3 {
+  --accent-color: #4ECDC4;
+  --gradient: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+}
+
+.project-4 {
+  --accent-color: #FA709A;
+  --gradient: linear-gradient(135deg, #FA709A 0%, #FEE140 100%);
+}
+
+/* Mockup Gradient Backgrounds */
+.project-mockup-1 {
+  background: var(--gradient);
+}
+
+.project-mockup-2 {
+  background: var(--gradient);
+}
+
+.project-mockup-3 {
+  background: var(--gradient);
+}
+
+.project-mockup-4 {
+  background: var(--gradient);
+}
+
+/* Technology Tag Hover Colors - Project 1 */
+.project-1:hover .technology-tag:nth-child(1),
+.project-1.project-card-hovered .technology-tag:nth-child(1) {
+  background: rgba(72, 187, 120, 0.3);
+  border-color: rgba(72, 187, 120, 0.5);
+  color: #ffffff;
+}
+
+.project-1:hover .technology-tag:nth-child(2),
+.project-1.project-card-hovered .technology-tag:nth-child(2) {
+  background: rgba(97, 218, 251, 0.3);
+  border-color: rgba(97, 218, 251, 0.5);
+  color: #ffffff;
+}
+
+.project-1:hover .technology-tag:nth-child(3),
+.project-1.project-card-hovered .technology-tag:nth-child(3) {
+  background: rgba(6, 182, 212, 0.3);
+  border-color: rgba(6, 182, 212, 0.5);
+  color: #ffffff;
+}
+
+.project-1:hover .technology-tag:nth-child(4),
+.project-1.project-card-hovered .technology-tag:nth-child(4) {
+  background: rgba(49, 120, 198, 0.3);
+  border-color: rgba(49, 120, 198, 0.5);
+  color: #ffffff;
+}
+
+.project-1:hover .technology-tag:nth-child(5),
+.project-1.project-card-hovered .technology-tag:nth-child(5) {
+  background: rgba(255, 107, 107, 0.3);
+  border-color: rgba(255, 107, 107, 0.5);
+  color: #ffffff;
+}
+
+.project-1:hover .technology-tag:nth-child(6),
+.project-1.project-card-hovered .technology-tag:nth-child(6) {
+  background: rgba(240, 62, 47, 0.3);
+  border-color: rgba(240, 62, 47, 0.5);
+  color: #ffffff;
+}
+
+.project-1:hover .technology-tag:nth-child(7),
+.project-1.project-card-hovered .technology-tag:nth-child(7) {
+  background: rgba(147, 51, 234, 0.3);
+  border-color: rgba(147, 51, 234, 0.5);
+  color: #ffffff;
+}
+
+.project-1:hover .technology-tag:nth-child(8),
+.project-1.project-card-hovered .technology-tag:nth-child(8) {
+  background: rgba(45, 212, 191, 0.3);
+  border-color: rgba(45, 212, 191, 0.5);
+  color: #ffffff;
+}
+
+.project-1:hover .technology-tag:nth-child(9),
+.project-1.project-card-hovered .technology-tag:nth-child(9) {
+  background: rgba(66, 133, 244, 0.3);
+  border-color: rgba(66, 133, 244, 0.5);
+  color: #ffffff;
+}
+
+.project-1:hover .technology-tag:nth-child(10),
+.project-1.project-card-hovered .technology-tag:nth-child(10) {
+  background: rgba(138, 124, 168, 0.3);
+  border-color: rgba(138, 124, 168, 0.5);
+  color: #ffffff;
+}
+
+/* Technology Tag Hover Colors - Project 2 */
+.project-2:hover .technology-tag:nth-child(1),
+.project-2.project-card-hovered .technology-tag:nth-child(1) {
+  background: rgba(55, 118, 171, 0.3);
+  border-color: rgba(55, 118, 171, 0.5);
+  color: #ffffff;
+}
+
+.project-2:hover .technology-tag:nth-child(2),
+.project-2.project-card-hovered .technology-tag:nth-child(2) {
+  background: rgba(12, 93, 58, 0.4);
+  border-color: rgba(12, 93, 58, 0.5);
+  color: #ffffff;
+}
+
+.project-2:hover .technology-tag:nth-child(3),
+.project-2.project-card-hovered .technology-tag:nth-child(3) {
+  background: rgba(51, 103, 145, 0.3);
+  border-color: rgba(51, 103, 145, 0.5);
+  color: #ffffff;
+}
+
+.project-2:hover .technology-tag:nth-child(4),
+.project-2.project-card-hovered .technology-tag:nth-child(4) {
+  background: rgba(220, 56, 45, 0.3);
+  border-color: rgba(220, 56, 45, 0.5);
+  color: #ffffff;
+}
+
+.project-2:hover .technology-tag:nth-child(5),
+.project-2.project-card-hovered .technology-tag:nth-child(5) {
+  background: rgba(36, 150, 237, 0.3);
+  border-color: rgba(36, 150, 237, 0.5);
+  color: #ffffff;
+}
+
+.project-2:hover .technology-tag:nth-child(6),
+.project-2.project-card-hovered .technology-tag:nth-child(6) {
+  background: rgba(255, 153, 0, 0.3);
+  border-color: rgba(255, 153, 0, 0.5);
+  color: #ffffff;
+}
+
+.project-2:hover .technology-tag:nth-child(7),
+.project-2.project-card-hovered .technology-tag:nth-child(7) {
+  background: rgba(255, 111, 0, 0.3);
+  border-color: rgba(255, 111, 0, 0.5);
+  color: #ffffff;
+}
+
+.project-2:hover .technology-tag:nth-child(8),
+.project-2.project-card-hovered .technology-tag:nth-child(8) {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+/* Technology Tag Hover Colors - Project 3 */
+.project-3:hover .technology-tag:nth-child(1),
+.project-3.project-card-hovered .technology-tag:nth-child(1) {
+  background: rgba(51, 153, 51, 0.3);
+  border-color: rgba(51, 153, 51, 0.5);
+  color: #ffffff;
+}
+
+.project-3:hover .technology-tag:nth-child(2),
+.project-3.project-card-hovered .technology-tag:nth-child(2) {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.project-3:hover .technology-tag:nth-child(3),
+.project-3.project-card-hovered .technology-tag:nth-child(3) {
+  background: rgba(71, 162, 72, 0.3);
+  border-color: rgba(71, 162, 72, 0.5);
+  color: #ffffff;
+}
+
+.project-3:hover .technology-tag:nth-child(4),
+.project-3.project-card-hovered .technology-tag:nth-child(4) {
+  background: rgba(97, 218, 251, 0.3);
+  border-color: rgba(97, 218, 251, 0.5);
+  color: #ffffff;
+}
+
+.project-3:hover .technology-tag:nth-child(5),
+.project-3.project-card-hovered .technology-tag:nth-child(5) {
+  background: rgba(99, 91, 255, 0.3);
+  border-color: rgba(99, 91, 255, 0.5);
+  color: #ffffff;
+}
+
+.project-3:hover .technology-tag:nth-child(6),
+.project-3.project-card-hovered .technology-tag:nth-child(6) {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.project-3:hover .technology-tag:nth-child(7),
+.project-3.project-card-hovered .technology-tag:nth-child(7) {
+  background: rgba(250, 204, 21, 0.3);
+  border-color: rgba(250, 204, 21, 0.5);
+  color: #ffffff;
+}
+
+/* Technology Tag Hover Colors - Project 4 */
+.project-4:hover .technology-tag:nth-child(1),
+.project-4.project-card-hovered .technology-tag:nth-child(1) {
+  background: rgba(79, 192, 141, 0.3);
+  border-color: rgba(79, 192, 141, 0.5);
+  color: #ffffff;
+}
+
+.project-4:hover .technology-tag:nth-child(2),
+.project-4.project-card-hovered .technology-tag:nth-child(2) {
+  background: rgba(255, 45, 32, 0.3);
+  border-color: rgba(255, 45, 32, 0.5);
+  color: #ffffff;
+}
+
+.project-4:hover .technology-tag:nth-child(3),
+.project-4.project-card-hovered .technology-tag:nth-child(3) {
+  background: rgba(68, 121, 161, 0.3);
+  border-color: rgba(68, 121, 161, 0.5);
+  color: #ffffff;
+}
+
+.project-4:hover .technology-tag:nth-child(4),
+.project-4.project-card-hovered .technology-tag:nth-child(4) {
+  background: rgba(255, 99, 132, 0.3);
+  border-color: rgba(255, 99, 132, 0.5);
+  color: #ffffff;
+}
+
+.project-4:hover .technology-tag:nth-child(5),
+.project-4.project-card-hovered .technology-tag:nth-child(5) {
+  background: rgba(0, 85, 113, 0.3);
+  border-color: rgba(0, 85, 113, 0.5);
+  color: #ffffff;
+}
+
+.project-4:hover .technology-tag:nth-child(6),
+.project-4.project-card-hovered .technology-tag:nth-child(6) {
+  background: rgba(29, 161, 242, 0.3);
+  border-color: rgba(29, 161, 242, 0.5);
+  color: #ffffff;
+}
+
+.project-4:hover .technology-tag:nth-child(7),
+.project-4.project-card-hovered .technology-tag:nth-child(7) {
+  background: rgba(24, 119, 242, 0.3);
+  border-color: rgba(24, 119, 242, 0.5);
+  color: #ffffff;
+}
+
+.project-4:hover .technology-tag:nth-child(8),
+.project-4.project-card-hovered .technology-tag:nth-child(8) {
+  background: rgba(227, 116, 0, 0.3);
+  border-color: rgba(227, 116, 0, 0.5);
+  color: #ffffff;
+}
+
+.project-4:hover .technology-tag:nth-child(9),
+.project-4.project-card-hovered .technology-tag:nth-child(9) {
+  background: rgba(55, 118, 171, 0.3);
+  border-color: rgba(55, 118, 171, 0.5);
+  color: #ffffff;
+}
+
+.project-4:hover .technology-tag:nth-child(10),
+.project-4.project-card-hovered .technology-tag:nth-child(10) {
+  background: rgba(12, 93, 58, 0.4);
+  border-color: rgba(12, 93, 58, 0.5);
+  color: #ffffff;
+}
+
+.project-4:hover .technology-tag:nth-child(11),
+.project-4.project-card-hovered .technology-tag:nth-child(11) {
+  background: rgba(51, 103, 145, 0.3);
+  border-color: rgba(51, 103, 145, 0.5);
+  color: #ffffff;
+}

@@ -1,0 +1,182 @@
+/* ===== SKILLS SECTION BASE ===== */
+.skillsSection {
+    width: 100% !important;
+    min-height: 100vh !important;
+    background: #000000 !important;
+    color: #ffffff;
+    padding: 2rem 2rem 0 2rem;
+    margin: 0 !important;
+    border: none !important;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* ===== SKILLS CONTAINER ===== */
+  .skillsContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* ===== HEADER ===== */
+  .skillsHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .skillsTitle {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .skillsDescription {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* ===== SKILLS DISPLAY ===== */
+  .skillsDisplay {
+    position: relative;
+    min-height: 300px;
+    overflow: visible;
+    padding: 1rem 0;
+  }
+  
+  /* ===== CATEGORY SKILLS CONTAINER ===== */
+  .categorySkills {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  .categorySkills.active {
+    position: relative;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* ===== SKILLS GRID ===== */
+  .skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* ===== PROGRESS INDICATORS ===== */
+  .progressIndicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+  
+  .progressIndicator {
+    width: 15px;
+    height: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .progressIndicator.active {
+    width: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  /* ===== BACKGROUND GRADIENT ===== */
+  .skillsSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(circle at 20% 20%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* ===== RESPONSIVE DESIGN ===== */
+  
+  /* Large Desktop (1440px+) */
+  @media (min-width: 1440px) {
+    .skillsContainer {
+      max-width: 1400px;
+    }
+  }
+  
+  /* Tablet (768px - 1023px) */
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .skillsSection {
+      padding: 2rem 1.5rem 0 1.5rem;
+    }
+    
+    .skillsTitle {
+      font-size: 2.5rem;
+    }
+    
+    .skillsGrid {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 1rem;
+    }
+  }
+  
+  /* Mobile (320px - 767px) */
+  @media (max-width: 767px) {
+    .skillsSection {
+      padding: 1.5rem 1rem 0 1rem;
+    }
+    
+    .skillsTitle {
+      font-size: 2rem;
+    }
+    
+    .skillsDescription {
+      font-size: 1rem;
+    }
+    
+    .skillsGrid {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 1rem;
+    }
+  }
+  
+  /* Extra Small Mobile (320px - 479px) */
+  @media (max-width: 479px) {
+    .skillsSection {
+      padding: 1rem 0.5rem 0 0.5rem;
+    }
+    
+    .skillsTitle {
+      font-size: 1.8rem;
+    }
+    
+    .skillsGrid {
+      grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+      gap: 0.8rem;
+    }
+  }
+  
+  /* Dark mode compatibility */
+  @media (prefers-color-scheme: dark) {
+    .skillsSection {
+      background: #000000 !important;
+    }
+  }

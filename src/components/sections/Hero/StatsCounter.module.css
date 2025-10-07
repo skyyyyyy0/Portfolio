@@ -1,0 +1,51 @@
+.stat {
+    text-align: center;
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .stat:nth-child(1) {
+    animation-delay: 0.4s;
+  }
+  
+  .stat:nth-child(2) {
+    animation-delay: 0.6s;
+  }
+  
+  .stat:nth-child(3) {
+    animation-delay: 0.8s;
+  }
+  
+  .number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .number.blue {
+    color: #3b82f6;
+  }
+  
+  .number.green {
+    color: #10b981;
+  }
+  
+  .number.purple {
+    color: #8b5cf6;
+  }
+  
+  .label {
+    font-size: 0.9rem;
+    color: #ffffff;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

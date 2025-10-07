@@ -1,0 +1,51 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+
+/* Section Base */
+.section {
+  width: 100% !important;
+  min-height: 100vh !important;
+  background: #000000 !important;
+  color: #ffffff;
+  padding: 4rem 2rem;
+  margin: 0 !important;
+  border: none !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive - Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* Responsive - Mobile (320px - 767px) */
+@media (max-width: 767px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Responsive - Extra Small Mobile (320px - 479px) */
+@media (max-width: 479px) {
+  .section {
+    padding: 1.5rem 0.5rem;
+  }
+}
+
+/* Dark Mode Compatibility */
+@media (prefers-color-scheme: dark) {
+  .section {
+    background: #000000 !important;
+  }
+}

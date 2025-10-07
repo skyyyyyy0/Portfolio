@@ -1,0 +1,164 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .avatar {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    animation: fadeInUpBounce 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .avatar:hover {
+    transform: scale(1.05);
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: center 20%;
+  }
+  
+  .name {
+    font-family: 'Allura', cursive;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    animation: fadeInRotate 0.6s ease-out 0.2s forwards;
+    opacity: 0;
+    transform: rotate(-2deg);
+  }
+  
+  .name:hover {
+    transform: rotate(0deg) scale(1.05);
+  }
+  
+  .stats {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUpBounce {
+    0% {
+      opacity: 0;
+      transform: translateY(60px) scale(0.9);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(-10px) scale(1.02);
+    }
+    80% {
+      transform: translateY(5px) scale(0.98);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  @keyframes fadeInRotate {
+    0% {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(-2deg) scale(1);
+    }
+  }
+  
+  /* Responsive */
+  @media (min-width: 1440px) {
+    .avatar {
+      width: 350px;
+      height: 350px;
+    }
+    
+    .name {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 1199px) and (min-width: 1024px) {
+    .avatar {
+      width: 250px;
+      height: 250px;
+    }
+    
+    .name {
+      font-size: 2.2rem;
+    }
+  }
+  
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .avatar {
+      width: 200px;
+      height: 200px;
+    }
+    
+    .name {
+      font-size: 2rem;
+    }
+    
+    .stats {
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .avatar {
+      width: 180px;
+      height: 180px;
+      margin-bottom: 1rem;
+    }
+    
+    .name {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    
+    .stats {
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 479px) {
+    .avatar {
+      width: 150px;
+      height: 150px;
+    }
+    
+    .name {
+      font-size: 1.5rem;
+    }
+    
+    .stats {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }

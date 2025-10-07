@@ -1,0 +1,196 @@
+/* Main Content Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    min-height: 60vh;
+    margin-bottom: 6rem;
+  }
+  
+  /* Left Side - Text Content */
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+  }
+  
+  /* Left side animation */
+  :global(.about-left.animate) {
+    animation: slideInLeft 1s ease-out 0.5s forwards;
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Title */
+  .title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.5rem, 4vw, 3rem);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    color: #ffffff;
+  }
+  
+  /* Name Highlight */
+  .nameHighlight {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    cursor: default;
+  }
+  
+  /* Role Highlight */
+  .roleHighlight {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    cursor: default;
+  }
+  
+  /* Description Container */
+  .description {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+  
+  /* Primary Text */
+  .primaryText {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+  }
+  
+  :global(.description-primary.animate) {
+    animation: fadeInUp 0.8s ease-out 0.8s forwards;
+  }
+  
+  /* Secondary Text */
+  .secondaryText {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+  }
+  
+  :global(.description-secondary.animate) {
+    animation: fadeInUp 0.8s ease-out 1s forwards;
+  }
+  
+  /* Emphasis Text */
+  .emphasisText {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    margin: 0;
+    opacity: 0;
+  }
+  
+  :global(.description-emphasis.animate) {
+    animation: fadeInUp 0.8s ease-out 1.2s forwards;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Right Side */
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+  }
+  
+  /* Right side animation */
+  :global(.about-right.animate) {
+    animation: slideInRight 1s ease-out 0.7s forwards;
+  }
+  
+  @keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive - Large Desktop (1440px+) */
+  @media (min-width: 1440px) {
+    .grid {
+      gap: 5rem;
+    }
+  }
+  
+  /* Responsive - Large Tablet (1024px - 1199px) */
+  @media (max-width: 1199px) and (min-width: 1024px) {
+    .grid {
+      gap: 3rem;
+    }
+  }
+  
+  /* Responsive - Tablet (768px - 1023px) */
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+    
+    .left {
+      align-items: center;
+    }
+  }
+  
+  /* Responsive - Mobile (320px - 767px) */
+  @media (max-width: 767px) {
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    
+    .left {
+      align-items: center;
+    }
+    
+    .title {
+      font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+  }
+  
+  /* Responsive - Extra Small Mobile (320px - 479px) */
+  @media (max-width: 479px) {
+    .title {
+      font-size: clamp(1.5rem, 10vw, 2rem);
+    }
+  }

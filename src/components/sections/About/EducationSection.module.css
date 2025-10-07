@@ -1,0 +1,72 @@
+/* Section Container */
+.section {
+    margin-top: 6rem;
+    opacity: 0;
+  }
+  
+  /* Section animation */
+  :global(.education-section.animate) {
+    animation: fadeInUp 1s ease-out 1.4s forwards;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Section Title */
+  .title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  /* Education Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Responsive - Tablet (768px - 1023px) */
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+  
+  /* Responsive - Mobile (320px - 767px) */
+  @media (max-width: 767px) {
+    .section {
+      margin-top: 4rem;
+    }
+    
+    .title {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+  
+  /* Responsive - Extra Small Mobile (320px - 479px) */
+  @media (max-width: 479px) {
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }

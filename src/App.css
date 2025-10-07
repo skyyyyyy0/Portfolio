@@ -1,0 +1,291 @@
+/* ===== APP.CSS - 메인 레이아웃 및 구조 ===== */
+
+/* ===== MAIN APP CONTAINER ===== */
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-dark);
+  position: relative;
+}
+
+/* ===== MAIN CONTENT CONTAINER ===== */
+.main-container {
+  max-width: 70%;
+  margin: 0 auto;
+  width: 100%;
+  background: var(--bg-dark);
+  box-shadow: var(--shadow-xl);
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ===== SECTION BASE STYLES ===== */
+.main-container section {
+  width: 100%;
+  position: relative;
+}
+
+/* ===== HERO SECTION ===== */
+#home {
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-section);
+  color: var(--text-white);
+  padding: 0;
+  border: none;
+}
+
+/* ===== CONTENT SECTIONS ===== */
+#about,
+#projects, 
+#skills,
+#contact {
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background: var(--bg-dark);
+}
+
+/* Remove border from last section */
+#contact {
+  border-bottom: none;
+}
+
+/* ===== SECTION VARIATIONS ===== */
+
+/* Alternating background colors for visual separation */
+#about {
+  background: var(--bg-dark);
+}
+
+#projects {
+  background: var(--bg-dark);
+}
+
+#skills {
+  background: var(--bg-dark);
+}
+
+#contact {
+  background: var(--bg-dark);
+  color: var(--text-white);
+}
+
+/* ===== SECTION INNER CONTAINERS ===== */
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+  .main-container {
+    max-width: 65%;
+  }
+  
+  #about,
+  #projects,
+  #skills,
+  #contact {
+    padding: 5rem 3rem;
+  }
+}
+
+/* Desktop (1200px - 1439px) */
+@media (max-width: 1439px) and (min-width: 1200px) {
+  .main-container {
+    max-width: 70%;
+  }
+}
+
+/* Large Tablet (1024px - 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .main-container {
+    max-width: 80%;
+  }
+  
+  #about,
+  #projects,
+  #skills,
+  #contact {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .main-container {
+    max-width: 90%;
+    box-shadow: var(--shadow-lg);
+  }
+  
+  #home {
+    min-height: 90vh;
+    height: auto;
+  }
+  
+  #about,
+  #projects,
+  #skills,
+  #contact {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+}
+
+/* Mobile (320px - 767px) */
+@media (max-width: 767px) {
+  .main-container {
+    max-width: 95%;
+    margin: var(--spacing-sm) auto;
+    box-shadow: var(--shadow-md);
+    border-radius: var(--radius-lg);
+  }
+  
+  #home {
+    min-height: 100vh;
+    height: auto;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+  
+  #about,
+  #projects,
+  #skills,
+  #contact {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+}
+
+/* Extra Small Mobile (320px - 479px) */
+@media (max-width: 479px) {
+  .main-container {
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  #home {
+    min-height: 100vh;
+    height: auto;
+    border-radius: 0;
+  }
+  
+  #about,
+  #projects,
+  #skills,
+  #contact {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+}
+
+/* ===== SECTION TRANSITIONS ===== */
+.main-container section {
+  transition: all var(--transition-base);
+}
+
+/* ===== SECTION SPACING UTILITIES ===== */
+
+/* Ensure proper stacking of sections */
+.main-container section + section {
+  margin-top: 0;
+}
+
+/* Add visual separation between sections */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #e5e7eb 20%,
+    #e5e7eb 80%,
+    transparent 100%
+  );
+  margin: 0;
+}
+
+/* ===== NAVIGATION OFFSET ===== */
+
+/* Offset for fixed navigation (if using fixed nav) */
+.nav-offset {
+  scroll-margin-top: 80px;
+}
+
+/* ===== LOADING STATES ===== */
+
+/* Loading skeleton for sections */
+.section-loading {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e0e0e0 50%,
+    #f0f0f0 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .App {
+    background: white;
+  }
+  
+  .main-container {
+    max-width: 100%;
+    margin: 0;
+    box-shadow: none;
+  }
+  
+  #home {
+    height: auto;
+    page-break-after: always;
+  }
+  
+  #about,
+  #projects,
+  #skills,
+  #contact {
+    padding: 2rem 1rem;
+    page-break-inside: avoid;
+  }
+}
+
+/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
+
+/* Skip link for keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--color-primary);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  z-index: 1000;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Focus management for sections */
+.section-focus:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: -3px;
+}

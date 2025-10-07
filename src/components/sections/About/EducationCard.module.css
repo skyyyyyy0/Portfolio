@@ -1,0 +1,153 @@
+/* Card Base */
+.card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  /* Card animations */
+  :global(.education-card.animate:nth-child(1)) {
+    animation: cardSlideUp 0.8s ease-out 1.6s forwards;
+  }
+  
+  :global(.education-card.animate:nth-child(2)) {
+    animation: cardSlideUp 0.8s ease-out 1.8s forwards;
+  }
+  
+  @keyframes cardSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Blue Variant Hover */
+  .card.blue:hover {
+    transform: translateY(-8px);
+    border-color: rgba(59, 130, 246, 0.6);
+    box-shadow: 0 20px 60px rgba(59, 130, 246, 0.25);
+  }
+  
+  /* Green Variant Hover */
+  .card.green:hover {
+    transform: translateY(-8px);
+    border-color: rgba(16, 185, 129, 0.6);
+    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.25);
+  }
+  
+  /* Icon Container */
+  .iconContainer {
+    width: 160px;
+    height: 80px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+    transition: all 0.3s ease;
+  }
+  
+  /* Logo Image */
+  .logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Degree Title */
+  .degree {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* University Name */
+  .university {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .universityBlue {
+    color: #3b82f6;
+  }
+  
+  .universityGreen {
+    color: #10b981;
+  }
+  
+  /* Period */
+  .period {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Details Section */
+  .details {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+  }
+  
+  /* Description */
+  .description {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  /* Responsive - Mobile (320px - 767px) */
+  @media (max-width: 767px) {
+    .card {
+      padding: 1.5rem;
+    }
+  }
+  
+  /* Responsive - Extra Small Mobile (320px - 479px) */
+  @media (max-width: 479px) {
+    .card {
+      padding: 1rem;
+    }
+    
+    .degree {
+      font-size: 1.1rem;
+    }
+    
+    .university {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    .card,
+    :global(.education-card.animate:nth-child(1)),
+    :global(.education-card.animate:nth-child(2)) {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+    
+    .card.blue:hover,
+    .card.green:hover {
+      transform: none;
+    }
+  }

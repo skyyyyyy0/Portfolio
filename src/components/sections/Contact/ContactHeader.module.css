@@ -1,0 +1,59 @@
+/* Header Container */
+.header {
+    margin-bottom: 2rem;
+  }
+  
+  /* Title with gradient */
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Description text */
+  .description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+  
+  /* Responsive - Large Desktop (1440px+) */
+  @media (min-width: 1440px) {
+    .title {
+      font-size: 2.5rem;
+    }
+    
+    .description {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Responsive - Tablet (768px - 1023px) */
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .title {
+      font-size: 1.8rem;
+    }
+  }
+  
+  /* Responsive - Mobile (480px - 767px) */
+  @media (max-width: 767px) and (min-width: 480px) {
+    .title {
+      font-size: 1.8rem;
+    }
+  }
+  
+  /* Responsive - Extra Small Mobile (320px - 479px) */
+  @media (max-width: 479px) {
+    .title {
+      font-size: 1.6rem;
+    }
+    
+    .description {
+      font-size: 0.9rem;
+    }
+  }

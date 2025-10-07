@@ -1,0 +1,20 @@
+/* ===== CIRCULAR PROGRESS ===== */
+.circularProgressContainer {
+    position: relative;
+  }
+  
+  .circularProgressSvg {
+    transform: rotate(-90deg);
+  }
+  
+  
+  .circularProgressText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
