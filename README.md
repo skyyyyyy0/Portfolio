@@ -1,69 +1,67 @@
-# React + TypeScript + Vite
+# Data Scientist Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website showcasing my expertise in data science, machine learning, and analytics. Built with React, TypeScript, and Vite for optimal performance and user experience.
 
-Currently, two official plugins are available:
+## 🎯 About This Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This portfolio serves as a comprehensive showcase of my journey as a data scientist, featuring:
 
-## Expanding the ESLint configuration
+- **Projects**: Real-world data science projects with detailed case studies
+- **Skills**: Technical proficiencies in machine learning, statistical analysis, and data visualization
+- **Education**: Academic background and continuous learning journey
+- **Contact**: Easy ways to connect and collaborate
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Tech Stack
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Framework**: React 18 with TypeScript
+- **Build Tool**: Vite for lightning-fast development
+- **Styling**: Modern CSS with responsive design
+- **Performance**: Optimized for speed and SEO
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠️ Installation & Setup
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Clone the repository
+git clone https://github.com/skyyyyyy0/Portfolio.git
+
+# Navigate to project directory
+cd Portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📂 Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+Portfolio/
+├── src/
+│   ├── components/    # Reusable UI components
+│   ├── pages/         # Page components
+│   ├── assets/        # Images and static files
+│   └── App.tsx        # Main application component
+├── public/            # Public assets
+└── README.md
+```
+
+## 🌟 Features
+
+- **Responsive Design**: Seamless experience across all devices
+- **Fast Loading**: Optimized performance with Vite
+- **Type Safety**: Full TypeScript implementation
+- **Modern UI**: Clean and professional interface
+- **Easy Navigation**: Intuitive user experience
+
+## 📫 Connect With Me
+
+Feel free to explore my portfolio and reach out for opportunities, collaborations, or discussions about data science!
+
+---
+
+**Built using React + TypeScript + Vite**
