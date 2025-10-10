@@ -27,19 +27,19 @@ const HeroAvatar: React.FC<HeroAvatarProps> = ({ name, imageSrc }) => {
       {/* Quick Stats */}
       <div className={styles.stats}>
         <StatsCounter 
-          end={3} 
+          end={1} 
           label="Years Exp." 
           suffix="+"
           colorClass="blue"
         />
         <StatsCounter 
-          end={15} 
+          end={10} 
           label="Projects"
           suffix="+"
           colorClass="green"
         />
         <StatsCounter 
-          end={10} 
+          end={5} 
           label="Data Points" 
           suffix="M+"
           colorClass="purple"

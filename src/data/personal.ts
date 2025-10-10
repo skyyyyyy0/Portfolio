@@ -52,8 +52,8 @@ export const aboutMe = {
   ],
   
   experience: {
-    yearsOfExperience: 3,
-    projectsCompleted: 15,
+    yearsOfExperience: 1,
+    projectsCompleted: 10,
     companiesWorked: 2
   }
 };
