@@ -23,17 +23,38 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   onTryItClick
 }) => {
   return (
-    <div
-      className={`${styles.card} project-${project.id} ${index % 2 === 1 ? styles.cardReverse : ''} ${isHovered ? styles.cardHovered : ''} project-card ${isHovered ? 'project-card-hovered' : ''}`}
-      data-accent-color={project.accentColor}
-      data-gradient={project.gradient}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      style={{
-        '--accent-color': project.accentColor,
-        '--gradient': project.gradient
-      } as React.CSSProperties}
-    >
+      <div
+        className={`${styles.card} project-${project.id} ${
+          index % 2 === 1 ? styles.cardReverse : ''
+        } ${isHovered ? styles.cardHovered : ''} project-card ${
+          isHovered ? 'project-card-hovered' : ''
+        }`}
+        data-accent-color={project.accentColor}
+        data-gradient={project.gradient}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onClick={() => {
+          if (project.githubUrl) {
+            window.open(project.githubUrl, '_blank', 'noopener,noreferrer');
+          }
+        }}
+        onKeyDown={(event) => {
+          if (
+            project.githubUrl &&
+            (event.key === 'Enter' || event.key === ' ')
+          ) {
+            event.preventDefault();
+            window.open(project.githubUrl, '_blank', 'noopener,noreferrer');
+          }
+        }}
+        role={project.githubUrl ? 'link' : undefined}
+        tabIndex={project.githubUrl ? 0 : undefined}
+        style={{
+          '--accent-color': project.accentColor,
+          '--gradient': project.gradient,
+          cursor: project.githubUrl ? 'pointer' : 'default',
+        } as React.CSSProperties}
+      >
       {/* Project Mockup Section */}
       <ProjectMockup
         projectId={project.id}

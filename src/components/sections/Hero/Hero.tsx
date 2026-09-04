@@ -6,9 +6,9 @@ import HeroContent from './HeroContent';
 
 const HeroSection: React.FC = () => {
   const titles = [
-    'Data Scientist',
-    'ML Engineer', 
-    'Analytics Expert',
+    'Data Analyst',
+    'Business Intelligence Analyst', 
+    'Analytics Professional',
     'Data Explorer'
   ];
 

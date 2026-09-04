@@ -1,67 +1,62 @@
-# Data Scientist Portfolio
+# Haneul Jang | Data Analyst Portfolio
 
-A modern, responsive portfolio website showcasing my expertise in data science, machine learning, and analytics. Built with React, TypeScript, and Vite for optimal performance and user experience.
+This repository contains the source code for my personal portfolio website. I built it to present my experience, technical skills, education, and selected analytics projects in one place.
 
-## 🎯 About This Project
+## Featured Projects
 
-This portfolio serves as a comprehensive showcase of my journey as a data scientist, featuring:
+- **Fleet Telematics Analytics** — Before-and-after analysis of fuel efficiency and driver behavior using event-driven telemetry from 12 commercial vehicles.
+- **CACE V1: Fuel Consumption Diagnostics** — An early-stage analytics prototype combining a physics-based fuel baseline with machine-learning residual correction.
+- **Vehicle CAN Analytics & IMU Validation** — An MF4-to-Tableau workflow for processing raw CAN data and validating a vehicle-activity proxy against J1939 ground truth.
+- **Every AIdu** — A cross-platform educational application built with React Native, TypeScript, Expo, and Firebase.
 
-- **Projects**: Real-world data science projects with detailed case studies
-- **Skills**: Technical proficiencies in machine learning, statistical analysis, and data visualization
-- **Education**: Academic background and continuous learning journey
-- **Contact**: Easy ways to connect and collaborate
+## Built With
 
-## 🚀 Tech Stack
+- React
+- TypeScript
+- Vite
+- CSS Modules
+- Responsive CSS
+- Intersection Observer API
 
-- **Framework**: React 18 with TypeScript
-- **Build Tool**: Vite for lightning-fast development
-- **Styling**: Modern CSS with responsive design
-- **Performance**: Optimized for speed and SEO
-
-## 🛠️ Installation & Setup
+## Running Locally
 
 ```bash
-# Clone the repository
 git clone https://github.com/skyyyyyy0/Portfolio.git
-
-# Navigate to project directory
 cd Portfolio
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
+```
 
-# Build for production
+To create a production build:
+
+```bash
 npm run build
+npm run preview
 ```
 
-## 📂 Project Structure
+## Project Structure
 
-```
+```text
 Portfolio/
+├── public/
+│   └── assets/
 ├── src/
-│   ├── components/    # Reusable UI components
-│   ├── pages/         # Page components
-│   ├── assets/        # Images and static files
-│   └── App.tsx        # Main application component
-├── public/            # Public assets
+│   ├── components/
+│   ├── data/
+│   ├── hooks/
+│   ├── styles/
+│   ├── types/
+│   └── App.tsx
+├── package.json
 └── README.md
 ```
 
-## 🌟 Features
+## Data and Privacy
 
-- **Responsive Design**: Seamless experience across all devices
-- **Fast Loading**: Optimized performance with Vite
-- **Type Safety**: Full TypeScript implementation
-- **Modern UI**: Clean and professional interface
-- **Easy Navigation**: Intuitive user experience
+Work-related projects use anonymized identifiers and public-facing summary results. Proprietary raw data, customer information, vehicle identifiers, and credentials are not included in this repository.
 
-## 📫 Connect With Me
+## Contact
 
-Feel free to explore my portfolio and reach out for opportunities, collaborations, or discussions about data science!
-
----
-
-**Built using React + TypeScript + Vite**
+- [GitHub](https://github.com/skyyyyyy0)
+- [LinkedIn](https://www.linkedin.com/in/haneul-jang-1b8b9a190/)
+- [Email](mailto:haneul1410721@gmail.com)

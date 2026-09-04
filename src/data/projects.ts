@@ -9,6 +9,7 @@ export interface PortfolioProject {
   technologies: string[];
   qrCodeUrl: string | null;
   appStoreUrl: string | null;
+  githubUrl?: string;
   gradient: string;
   accentColor: string;
 }
@@ -16,42 +17,42 @@ export interface PortfolioProject {
 export const portfolioProjects: PortfolioProject[] = [
   {
     id: 1,
-    title: "Every AIdu",
-    tagline: "AI that adapts to how you learn",
-    mockupImage: "/assets/project1_bg.png",
-    description: "An AI-driven education platform designed to help students master the SAT through personalized practice, smart analytics, and cutting-edge AI models. Built to support both learners and educators, Every AIdu delivers precision, speed, and impact.",
+    title: "Fleet Telematics Analytics",
+    tagline: "Data-driven fleet insights",
+    mockupImage: "/assets/geotab_dashboard.png",
+    description: "Analyzed approximately 1.7M event-driven telemetry records from 12 commercial vehicles to measure changes in fuel efficiency and driving behavior before and after device installation. Built a time-aware analytics pipeline and FEI-Lite scoring framework to transform irregular telematics data into actionable fleet insights.",
     features: [
-      "Ongoing development of AI/NLP models for personalized practice.",
-      "Free version available now, lowering barriers for students.",
-      "Future partnerships with schools, libraries, and NGOs to expand access."
+      "Built vehicle-specific 30-day before-and-after datasets using the Geotab API.",
+      "Validated fuel and distance counters and applied time-weighted aggregation to reduce bias from irregular reporting intervals.",
+      "Scored 12/12 vehicles and delivered 3 Tableau dashboards, identifying 4 improving and 8 declining vehicles."
     ],
     technologies: [
-      "React Native",
-      "TypeScript",
-      "Tailwind CSS",
-      "Expo",
-      "Firebase",
-      "BigQuery",
-      "FastAPI",
-      "Docker",
-      "AWS",
       "Python",
+      "Pandas",
+      "SQL",
+      "Geotab API",
+      "AWS S3",
+      "AWS Athena",
+      "Excel",
+      "Tableau"
     ],
-    qrCodeUrl: "/assets/everyaidu-qr.png",
-    appStoreUrl: "https://apps.apple.com/app/everyaidu/id123456789",
+    qrCodeUrl: null,
+    appStoreUrl: null,
+    githubUrl: "https://github.com/skyyyyyy0/fleet-telemetry-analytics",
     gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
     accentColor: "#667eea"
   },
   {
     id: 2,
-    title: "Energy Analytics Platform",
-    tagline: "Data-driven insights for sustainable energy",
-    mockupImage: "/assets/project2_bg.png",
-    description: "A data-driven energy management platform analyzing New York's surplus electricity patterns to optimize resource distribution. Leverages machine learning to predict power surpluses and implements an equitable credit refund system for local communities.",
+    title: "Fuel Consumption Diagnostics",
+    tagline: "Physics-guided fuel analytics",
+    mockupImage: "/assets/actual_vs_expected_comparison.png",
+    description:
+    "An early-stage analytics prototype that estimates expected trip-level fuel consumption from sparse, event-driven vehicle telemetry. CACE V1 combines a physics-based baseline with machine-learning residual correction to identify vehicles consuming more or less fuel than expected.",
     features: [
-      "Predictive modeling of surplus electricity using Random Forest (R² = 0.87)",
-      "Borough-level energy consumption analysis with weather correlation insights.",
-      "Equitable credit distribution system based on population and consumption ratios."
+      "Built a trip-level modeling dataset from sparse, irregular vehicle telemetry.",
+      "Combined a physics-based baseline with Random Forest residual correction, improving final-test MAE by 2.64%.",
+      "Applied chronological and leave-one-vehicle-out validation and used SHAP to explain the main drivers of fuel deviation."
     ],
     technologies: [
       "Python",
@@ -59,13 +60,10 @@ export const portfolioProjects: PortfolioProject[] = [
       "NumPy",
       "Scikit-learn",
       "Random Forest",
-      "KNN",
-      "Linear Regression",
-      "Isolation Forest",
-      "Pearson Correlation",
-      "Spearman Correlation",
+      "SHAP",
       "Matplotlib",
-      "Seaborn"
+      "AWS S3",
+      "AWS Athena"
     ],
     qrCodeUrl: null,
     appStoreUrl: null,
@@ -74,57 +72,61 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     id: 3,
-    title: "Shortcut SAT",
-    tagline: "Universal math education, simplified",
-    mockupImage: "/assets/project3_bg.png",
-    description: "The foundational project that sparked Every AIdu. A collaborative team effort building an intuitive math education app accessible to learners of all ages. Through user-centric design and streamlined problem-solving flows, Shortcut SAT proved that complex mathematical concepts could be made universally approachable—laying the groundwork for next-generation AI-powered learning.",
+    title: "Vehicle CAN Analytics & IMU Validation",
+    tagline: "Validated insights from raw CAN data",
+    mockupImage: "/assets/vehicle_can_imu_validation_dashboard.png",
+    description:
+      "An end-to-end analytics workflow that processed more than 1.9 million raw MF4 CAN records and evaluated decoded IMU activity against J1939 Speed and RPM ground truth. Because validation covered one anonymized vehicle and session, the resulting IMU rule is presented as an activity proxy rather than a production classifier.",
     features: [
-      "Intuitive UI/UX design enabling seamless math practice across all age groups.",
-      "Collaborative team development establishing scalable educational frameworks.",
-      "Foundation architecture that evolved into Every AIdu's AI-powered platform."
-    ],
-    technologies: [
-      "React Native",
-      "TypeScript",
-      "Tailwind CSS",
-      "Expo",
-      "Firebase",
-      "iOS",
-      "Android"
-    ],      
-    qrCodeUrl: null,
-    appStoreUrl: null,
-    gradient: "linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%)",
-    accentColor: "#4ECDC4"
-  },
-  {
-    id: 4,
-    title: "Every AIdu Analytics Dashboard",
-    tagline: "Transforming user data into actionable learning insights",
-    mockupImage: "/assets/project4_bg.png",
-    description: "An intelligent analytics system that transforms Every AIdu user behavior into personalized learning strategies. By analyzing incorrect answer patterns, time spent per problem, attendance consistency, and engagement metrics, the platform identifies individual learning gaps and predicts optimal study paths. This data-driven approach enables precise curriculum customization, automatically highlighting areas requiring focused practice and adjusting difficulty levels to match each student's unique learning curve—delivering truly personalized education at scale.",
-    features: [
-      "Multi-dimensional data tracking: error patterns, solving time, attendance, and engagement metrics",
-      "Predictive learning gap identification with automated difficulty adjustment algorithms",
-      "Personalized study path generation based on individual performance analysis."
+      "Parsed 1.9M+ MF4 CAN records and engineered aligned one-second IMU and J1939 validation windows.",
+      "Achieved a Validation Macro F1 of 0.8500 and Balanced Accuracy of 0.8333 using a chronologically selected threshold.",
+      "Matched Python and Athena SQL results across 41/41 checks and delivered an interactive Tableau validation dashboard."
     ],
     technologies: [
       "Python",
-      "FastAPI",
-      "BigQuery",
-      "Firebase",
       "Pandas",
       "NumPy",
-      "Scikit-learn",
-      "Docker",
-      "AWS",
-      "React",
-      "TypeScript"
+      "asammdf",
+      "SQL",
+      "AWS S3",
+      "AWS Athena",
+      "Tableau",
+      "Matplotlib"
     ],
     qrCodeUrl: null,
     appStoreUrl: null,
+    githubUrl: "https://github.com/skyyyyyy0/vehicle-can-analysis",
     gradient: "linear-gradient(135deg, #FA709A 0%, #FEE140 100%)",
     accentColor: "#FA709A"
+  },
+  {
+      id: 4,
+      title: "Every AIdu",
+      tagline: "AI that adapts to how you learn",
+      mockupImage: "/assets/project1_bg.png",
+      description:
+        "An AI-driven education platform designed to help students master the SAT through personalized practice, smart analytics, and cutting-edge AI models. Built to support both learners and educators, Every AIdu delivers precision, speed, and impact.",
+      features: [
+        "Ongoing development of AI/NLP models for personalized practice.",
+        "Free version available now, lowering barriers for students.",
+        "Future partnerships with schools, libraries, and NGOs to expand access."
+      ],
+      technologies: [
+        "React Native",
+        "TypeScript",
+        "Tailwind CSS",
+        "Expo",
+        "Firebase",
+        "BigQuery",
+        "FastAPI",
+        "Docker",
+        "AWS",
+        "Python"
+      ],
+    qrCodeUrl: "/assets/everyaidu-qr.png",
+    appStoreUrl: "https://apps.apple.com/app/everyaidu/id123456789",
+    gradient: "linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%)",
+    accentColor: "#4ECDC4"
   }
 ];
 

@@ -64,7 +64,7 @@ const Projects: React.FC = () => {
         </h2>
         
         <p className={styles.description}>
-          Building innovative solutions through app development, data science, and web engineering
+          Transforming complex data into reliable insights through analytics, visualization, and predictive modeling.
         </p>
 
         <div className={styles.grid}>

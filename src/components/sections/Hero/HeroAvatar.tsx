@@ -33,15 +33,16 @@ const HeroAvatar: React.FC<HeroAvatarProps> = ({ name, imageSrc }) => {
           colorClass="blue"
         />
         <StatsCounter 
-          end={10} 
-          label="Projects"
+          end={4} 
+          label="Featured Projects"
           suffix="+"
           colorClass="green"
         />
         <StatsCounter 
-          end={5} 
-          label="Data Points" 
+          end={3.6} 
+          label="Records Analyzed" 
           suffix="M+"
+          decimals={1}
           colorClass="purple"
         />
       </div>

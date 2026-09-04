@@ -25,12 +25,12 @@ const Contact: React.FC = () => {
       url: 'mailto:haneul110721@gmail.com',
       color: '#eab308'
     },
-    {
-      name: 'Instagram',
-      icon: '📷',
-      url: 'https://instagram.com/every_aidu',
-      color: '#e4405f'
-    }
+    // {
+    //   name: 'Instagram',
+    //   icon: '📷',
+    //   url: 'https://instagram.com/every_aidu',
+    //   color: '#e4405f'
+    // }
   ];
 
   return (
@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
         {/* Header */}
         <ContactHeader
           title="Let's Connect"
-          description="Coffee chats welcome! ☕ Ready to collaborate or just say hello?"
+          description="Coffee chats welcome! ☕ Open to Data Analyst opportunities and conversations about data, analytics, and business impact."
         />
 
         {/* Contact Links Grid */}

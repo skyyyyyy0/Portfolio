@@ -3,11 +3,11 @@ import type { PersonalInfo } from '../types';
 // Single Source of Truth for Personal Information
 export const personalInfo: PersonalInfo = {
   name: "Haneul Jang",
-  title: "Data Scientist",
-  subtitle: "Exploring the Universe of Data Science",
-  description: `I am an open-minded individual who loves exploring and learning new things. Outside of work, I enjoy running, exercising, reading books, and taking peaceful walks.`,
+  title: "Data Analyst",
+  subtitle: "Exploring the Universe of Data Analytics",
+  description: `I transform complex, event-driven data into reliable KPIs, interactive dashboards, and actionable business insights using Python, SQL, Tableau, and AWS.`,
   email: "haneul110721@gmail.com",
-  location: "New York City, NY/USA",
+  location: "Edgewater, NJ/USA",
   socialLinks: [
     {
       platform: "GitHub",
@@ -19,24 +19,23 @@ export const personalInfo: PersonalInfo = {
       url: "https://linkedin.com/in/haneul-jang-1b8b9a190",
       icon: "💼"
     },
-    {
-      platform: "Instagram",
-      url: "https://instagram.com/every_aidu",
-      icon: "📷"
-    },
+    // {
+    //   platform: "Instagram",
+    //   url: "https://instagram.com/every_aidu",
+    //   icon: "📷"
+    // },
     {
       platform: "Email",
       url: "mailto:haneul110721@gmail.com",
       icon: "📧"
     }
   ],
-  resume: "https://www.linkedin.com/in/haneul-jang-1b8b9a190/"
+  resume: "assets/Data_Analyst_Haneul_Jang_Resume.pdf"
 };
 
 // Additional personal information
 export const aboutMe = {
-  shortBio: `Data Scientist specializing in predictive modeling and data-driven product optimization. 
-    Passionate about transforming complex data into actionable insights that scale to millions of users.`,
+  shortBio: `Data Analyst transforming complex, event-driven data into reliable KPIs, dashboards, and actionable business insights`,
   
   careerGoals: `My goal is to join a Big Tech company where I can apply machine learning and statistical 
     modeling to problems that impact billions of users, while continuing to push the boundaries of 
@@ -53,7 +52,7 @@ export const aboutMe = {
   
   experience: {
     yearsOfExperience: 1,
-    projectsCompleted: 10,
+    projectsCompleted: 4,
     companiesWorked: 2
   }
 };

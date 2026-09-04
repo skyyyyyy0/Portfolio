@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styles from '../../styles/components/projects/ProjectMockup.module.css';
 
 interface ProjectMockupProps {
@@ -16,26 +17,28 @@ const ProjectMockup: React.FC<ProjectMockupProps> = ({
   mockupImage,
   title,
   qrCodeUrl,
-  onTryItClick
+  onTryItClick,
 }) => {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} project-mockup-container`}>
       <div className={`${styles.mockup} project-mockup-${projectId}`}>
         <div className={styles.header}>
           <p className={styles.tagline}>{tagline}</p>
         </div>
+
         <div className={styles.imageWrapper}>
-          <img 
-            src={mockupImage} 
-            alt={title}
+          <img
+            src={mockupImage}
+            alt={`${title} dashboard preview`}
             className={styles.backgroundImage}
             loading="lazy"
           />
         </div>
       </div>
-      
+
       {qrCodeUrl && (
-        <button 
+        <button
+          type="button"
           className={styles.tryItButton}
           onClick={onTryItClick}
           aria-label={`Try ${title}`}

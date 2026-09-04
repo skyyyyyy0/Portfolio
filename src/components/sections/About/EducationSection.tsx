@@ -7,8 +7,8 @@ const EducationSection: React.FC = () => {
     {
       degree: 'Master of Science in Mathematics',
       university: 'The City College of New York',
-      period: '2025 - Present • New York, NY',
-      description: 'Focused on applying mathematical statistics and machine learning principles to complex data challenges, with advanced coursework in Deep Learning, Natural Language Processing, and Data Visualization.',
+      period: '2025 - May 2027 (Expected) • New York, NY',
+      description: 'Focused on statistics, probability, data analysis, machine learning, and advanced calculus, applying mathematical reasoning to real-world analytical problems.',
       logoSrc: '/assets/CCNY_LOGO.png',
       logoAlt: 'CCNY',
       variant: 'blue' as const

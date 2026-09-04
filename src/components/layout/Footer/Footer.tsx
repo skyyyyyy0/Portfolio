@@ -30,8 +30,7 @@ const Footer: React.FC = () => {
               {personalInfo.name}
             </h3>
             <p className={styles.brandDescription}>
-              Data Scientist exploring the universe of machine learning and analytics. 
-              Transforming complex data into actionable insights.
+              Data Analyst transforming complex, event-driven data into reliable KPIs, dashboards, and actionable business insights
             </p>
             
             {/* Social Links */}
