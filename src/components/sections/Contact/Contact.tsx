@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
     {
       name: 'LinkedIn',
       icon: '💼',
-      url: 'https://linkedin.com/in/haneul-jang-1b8b9a190',
+      url: 'https://linkedin.com/in/haneul-jang-data-analyst',
       color: '#0077b5'
     },
     {

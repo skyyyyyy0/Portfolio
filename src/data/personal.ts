@@ -16,7 +16,7 @@ export const personalInfo: PersonalInfo = {
     },
     {
       platform: "LinkedIn", 
-      url: "https://linkedin.com/in/haneul-jang-1b8b9a190",
+      url: "https://linkedin.com/in/haneul-jang-data-analyst",
       icon: "💼"
     },
     // {

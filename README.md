@@ -58,5 +58,5 @@ Work-related projects use anonymized identifiers and public-facing summary resul
 ## Contact
 
 - [GitHub](https://github.com/skyyyyyy0)
-- [LinkedIn](https://www.linkedin.com/in/haneul-jang-1b8b9a190/)
+- [LinkedIn](https://www.linkedin.com/in/haneul-jang-data-analyst/)
 - [Email](mailto:haneul110721@gmail.com)
