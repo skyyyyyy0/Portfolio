@@ -67,6 +67,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     qrCodeUrl: null,
     appStoreUrl: null,
+    githubUrl: "https://github.com/skyyyyyy0/cace-fuel-diagnostics",
     gradient: "linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%)",
     accentColor: "#FF6B6B"
   },
